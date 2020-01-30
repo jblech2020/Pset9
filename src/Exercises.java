@@ -24,12 +24,12 @@ public class Exercises {
 
 		ArrayList<String> firstLast = new ArrayList<String>();
 		for (int i = 0; i < n; i++) {
-			firstLast.set(i, values.get(i));
+			firstLast.add(values.get(i));
 		}
 
 		int placeHolder = n;
 		for (int i = n; i < 2*n; i++) {
-			firstLast.set(i, values.get(values.size()-placeHolder));
+			firstLast.add(values.get(values.size()-placeHolder));
 			placeHolder--;
 		}
 
@@ -37,9 +37,7 @@ public class Exercises {
 	}
 
 	public int difference(ArrayList<Integer> numbers) {
-		// write your code here
-
-		return -1;		// default return value to ensure compilation
+		return -1;
 	}
 
 	public double biggest(ArrayList<Double> numbers) {
