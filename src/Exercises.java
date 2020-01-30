@@ -58,21 +58,21 @@ public class Exercises {
 
 	public double biggest(ArrayList<Double> numbers) {
 		//Check
-		if (numbers == null || numbers.length < 3 || numbers.length%2 == 0) {
+		if (numbers == null || numbers.size() < 3 || numbers.size()%2 == 0) {
 			return -1;
 		}
 
-		int midIndex = (int)(Math.ceil(numbers.length / 2));
+		int midIndex = (int)(Math.ceil(numbers.size() / 2));
 		double max = -1;
-		for (int i = 0; i < numbers.length; i++) {
-			if (numbers[i] < 0) {
-				return -1;
-		}
-			if ((i == 0 || i == numbers.length - 1 || i == midIndex) && numbers[i] > max) {
-				max = numbers[i];
-			}
-		   }
-		return max;
+		for (int i = 0; i < numbers.size(); i++) {
+			 if (numbers.get(i) < 0) {
+				 return -1;
+			 }
+		   if ((i == 0 || i == numbers.size() - 1 || i == midIndex) && numbers.get(i) > max) {
+				 max = numbers.get(i);
+			 }
+		 }
+		 return max;
 	}
 
 	public ArrayList<String> middle(ArrayList<String> values) {
