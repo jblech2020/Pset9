@@ -127,13 +127,13 @@ public class Exercises {
 
 	public boolean everywhere(ArrayList<Integer> numbers, int x) {
 		//Check
-		if (numbers == null || numbers.length < 1) {
+		if (numbers == null || numbers.size() < 1) {
 			return false;
 		}
 		boolean lastPos = false;
 		int hole = 0;
-		for (int i = 0; i < numbers.length; i++) {
-			if (numbers[i] == x) {
+		for (int i = 0; i < numbers.size(); i++) {
+			if (numbers.get(i) == x) {
 				lastPos = true;
 				hole = 0;
 			} else {
