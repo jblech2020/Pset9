@@ -100,7 +100,27 @@ public class Exercises {
 	}
 
 	public boolean increasing(ArrayList<Integer> numbers) {
-		// write your code here
+		//Check
+		if (numbers == null || numbers.size() < 3) {
+			return false;
+		}
+
+		int lowest = numbers.get(0);
+		int middle = numbers.get(1);
+		int last = numbers.get(2);
+		for (int i = 0; i < numbers.size(); i++) {
+			if (lowest < middle && middle < last) {
+				return true;
+			}
+
+			if (i + 2 < numbers.size()) {
+					lowest = numbers.get(i);
+					middle = numbers.get(i + 1);
+					last = numbers.get(i + 2);
+				} else {
+					return false;
+			}
+		}
 
 		return false;	// default return value to ensure compilation
 	}
