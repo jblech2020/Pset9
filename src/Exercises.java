@@ -37,7 +37,23 @@ public class Exercises {
 	}
 
 	public int difference(ArrayList<Integer> numbers) {
-		return -1;
+		//Check
+		if (numbers == null || numbers.size() < 1) {
+			return -1;
+		}
+
+		int largest = numbers.get(0);
+		int smallest = numbers.get(0);
+		for (int i = 0; i < numbers.size(); i++) {
+			if (numbers.get(i) > largest) {
+				largest = numbers.get(i);
+			}
+			if (numbers.get(i) < smallest) {
+				smallest = numbers.get(i);
+			}
+		}
+
+		return (largest - smallest);
 	}
 
 	public double biggest(ArrayList<Double> numbers) {
